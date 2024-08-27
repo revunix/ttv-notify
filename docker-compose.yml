@@ -5,11 +5,11 @@ services:
     container_name: ttv-notify
     build: .
     environment:
-      TELEGRAM_TOKEN: ""
-      TELEGRAM_CHATID: ""
-      TWITCH_CLIENT_ID: ""
-      TWITCH_CLIENT_SECRET: ""
-      TWITCH_STREAMERS: "streamer1,streamer2"
-      MESSAGE_TEMPLATE: "{user_name} is live! \n\n{user_url}"
+      TELEGRAM_TOKEN: "your_telegram_bot_token"
+      TELEGRAM_CHATID: "your_telegram_chat_id"
+      TWITCH_CLIENT_ID: "your_twitch_client_id"
+      TWITCH_CLIENT_SECRET: "your_twitch_client_secret"
+      TWITCH_STREAMERS: "streamer1,streamer2,streamer3"
+      MESSAGE_TEMPLATE: "{user_name} is now live playing {game_name} with {viewer_count} viewers! Watch here: {user_url}"
     network_mode: bridge
     restart: unless-stopped
